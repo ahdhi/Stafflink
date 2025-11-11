@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "StaffGrid.Application/1.0.0": {
+        "dependencies": {
+          "StaffGrid.Core": "1.0.0"
+        },
+        "runtime": {
+          "StaffGrid.Application.dll": {}
+        }
+      },
+      "StaffGrid.Core/1.0.0": {
+        "runtime": {
+          "StaffGrid.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "StaffGrid.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "StaffGrid.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "otx3ESTeLj5wseOqS6CcpxCmgkCsafhPwUCJRRLrbXs=",
+  "Source": "StaffGrid.API",
+  "BasePath": "_content/StaffGrid.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

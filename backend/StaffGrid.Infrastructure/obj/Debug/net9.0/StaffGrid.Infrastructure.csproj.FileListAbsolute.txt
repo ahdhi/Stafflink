@@ -1,0 +1,17 @@
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\bin\Debug\net9.0\StaffGrid.Infrastructure.deps.json
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\bin\Debug\net9.0\StaffGrid.Infrastructure.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\bin\Debug\net9.0\StaffGrid.Infrastructure.pdb
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\bin\Debug\net9.0\StaffGrid.Application.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\bin\Debug\net9.0\StaffGrid.Core.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\bin\Debug\net9.0\StaffGrid.Core.pdb
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\bin\Debug\net9.0\StaffGrid.Application.pdb
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\StaffGrid.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\StaffGrid.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\StaffGrid.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\StaffGrid.Infrastructure.AssemblyInfo.cs
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\StaffGrid.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\StaffGri.737825F8.Up2Date
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\StaffGrid.Infrastructure.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\refint\StaffGrid.Infrastructure.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\StaffGrid.Infrastructure.pdb
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\ref\StaffGrid.Infrastructure.dll

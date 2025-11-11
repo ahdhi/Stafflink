@@ -1,0 +1,15 @@
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\bin\Debug\net9.0\StaffGrid.Application.deps.json
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\bin\Debug\net9.0\StaffGrid.Application.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\bin\Debug\net9.0\StaffGrid.Application.pdb
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\bin\Debug\net9.0\StaffGrid.Core.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\bin\Debug\net9.0\StaffGrid.Core.pdb
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\StaffGrid.Application.csproj.AssemblyReference.cache
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\StaffGrid.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\StaffGrid.Application.AssemblyInfoInputs.cache
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\StaffGrid.Application.AssemblyInfo.cs
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\StaffGrid.Application.csproj.CoreCompileInputs.cache
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\StaffGri.D98E9098.Up2Date
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\StaffGrid.Application.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\refint\StaffGrid.Application.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\StaffGrid.Application.pdb
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\ref\StaffGrid.Application.dll
