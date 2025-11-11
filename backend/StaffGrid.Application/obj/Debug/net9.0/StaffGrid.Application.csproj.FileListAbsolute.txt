@@ -13,3 +13,4 @@ C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\n
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\refint\StaffGrid.Application.dll
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\StaffGrid.Application.pdb
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\ref\StaffGrid.Application.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Application\obj\Debug\net9.0\StaffGrid.Application.sourcelink.json

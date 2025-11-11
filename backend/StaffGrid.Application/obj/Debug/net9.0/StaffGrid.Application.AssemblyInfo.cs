@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StaffGrid.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+186782bc58c3fdabdecf62fbeb12c138db1f10ec")]
 [assembly: System.Reflection.AssemblyProductAttribute("StaffGrid.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StaffGrid.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

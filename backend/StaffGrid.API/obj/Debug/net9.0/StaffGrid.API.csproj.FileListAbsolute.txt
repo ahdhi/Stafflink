@@ -162,3 +162,4 @@ C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.API\obj\Debug\net9.0\re
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.API\obj\Debug\net9.0\StaffGrid.API.pdb
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.API\obj\Debug\net9.0\StaffGrid.API.genruntimeconfig.cache
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.API\obj\Debug\net9.0\ref\StaffGrid.API.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.API\obj\Debug\net9.0\StaffGrid.API.sourcelink.json

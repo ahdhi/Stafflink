@@ -15,3 +15,4 @@ C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debu
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\refint\StaffGrid.Infrastructure.dll
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\StaffGrid.Infrastructure.pdb
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\ref\StaffGrid.Infrastructure.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Infrastructure\obj\Debug\net9.0\StaffGrid.Infrastructure.sourcelink.json

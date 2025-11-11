@@ -9,3 +9,4 @@ C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Core\obj\Debug\net9.0\S
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Core\obj\Debug\net9.0\refint\StaffGrid.Core.dll
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Core\obj\Debug\net9.0\StaffGrid.Core.pdb
 C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Core\obj\Debug\net9.0\ref\StaffGrid.Core.dll
+C:\Users\adhit\Documents\Dev\Stafflink\backend\StaffGrid.Core\obj\Debug\net9.0\StaffGrid.Core.sourcelink.json

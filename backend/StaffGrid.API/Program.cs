@@ -106,6 +106,9 @@ builder.Services.AddHttpContextAccessor();
 // Register application services
 builder.Services.AddScoped<StaffGrid.Application.Interfaces.ITokenService, StaffGrid.Infrastructure.Services.TokenService>();
 builder.Services.AddScoped<StaffGrid.Application.Interfaces.IAuthService, StaffGrid.Infrastructure.Services.AuthService>();
+builder.Services.AddScoped<StaffGrid.Application.Interfaces.IShiftService, StaffGrid.Infrastructure.Services.ShiftService>();
+builder.Services.AddScoped<StaffGrid.Application.Interfaces.IStaffService, StaffGrid.Infrastructure.Services.StaffService>();
+builder.Services.AddScoped<StaffGrid.Application.Interfaces.IAgencyService, StaffGrid.Infrastructure.Services.AgencyService>();
 
 var app = builder.Build();
 
