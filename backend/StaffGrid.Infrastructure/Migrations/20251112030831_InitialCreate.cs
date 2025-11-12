@@ -417,7 +417,7 @@ namespace StaffGrid.Infrastructure.Migrations
                         column: x => x.ProposedStaffId,
                         principalTable: "Staff",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

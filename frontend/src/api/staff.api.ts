@@ -1,5 +1,5 @@
 import { apiClient } from './client'
-import type { Staff, Availability, Certification, PaginatedResponse } from '@/types'
+import type { Staff, StaffCreateRequest, PaginatedResponse } from '@/types'
 
 export const staffApi = {
   // Get all staff
@@ -7,7 +7,7 @@ export const staffApi = {
     page?: number
     pageSize?: number
     agencyId?: string
-    role?: string
+    professionalType?: string
     isAvailable?: boolean
   }): Promise<PaginatedResponse<Staff>> => {
     const response = await apiClient.get<PaginatedResponse<Staff>>('/staff', {
@@ -22,14 +22,20 @@ export const staffApi = {
     return response.data
   },
 
+  // Get my staff (agency users)
+  getMyStaff: async (): Promise<Staff[]> => {
+    const response = await apiClient.get<Staff[]>('/staff/my-staff')
+    return response.data
+  },
+
   // Create staff
-  createStaff: async (data: Partial<Staff>): Promise<Staff> => {
+  createStaff: async (data: StaffCreateRequest): Promise<Staff> => {
     const response = await apiClient.post<Staff>('/staff', data)
     return response.data
   },
 
   // Update staff
-  updateStaff: async (id: string, data: Partial<Staff>): Promise<Staff> => {
+  updateStaff: async (id: string, data: StaffCreateRequest): Promise<Staff> => {
     const response = await apiClient.put<Staff>(`/staff/${id}`, data)
     return response.data
   },
@@ -39,66 +45,9 @@ export const staffApi = {
     await apiClient.delete(`/staff/${id}`)
   },
 
-  // Get staff availability
-  getStaffAvailability: async (
-    staffId: string,
-    startDate?: string,
-    endDate?: string
-  ): Promise<Availability[]> => {
-    const response = await apiClient.get<Availability[]>(
-      `/staff/${staffId}/availability`,
-      {
-        params: { startDate, endDate },
-      }
-    )
-    return response.data
-  },
-
-  // Add staff availability
-  addAvailability: async (data: Partial<Availability>): Promise<Availability> => {
-    const response = await apiClient.post<Availability>('/staff/availability', data)
-    return response.data
-  },
-
-  // Update availability
-  updateAvailability: async (
-    id: string,
-    data: Partial<Availability>
-  ): Promise<Availability> => {
-    const response = await apiClient.put<Availability>(
-      `/staff/availability/${id}`,
-      data
-    )
-    return response.data
-  },
-
-  // Delete availability
-  deleteAvailability: async (id: string): Promise<void> => {
-    await apiClient.delete(`/staff/availability/${id}`)
-  },
-
-  // Get staff certifications
-  getStaffCertifications: async (staffId: string): Promise<Certification[]> => {
-    const response = await apiClient.get<Certification[]>(
-      `/staff/${staffId}/certifications`
-    )
-    return response.data
-  },
-
-  // Add certification
-  addCertification: async (
-    staffId: string,
-    data: Partial<Certification>
-  ): Promise<Certification> => {
-    const response = await apiClient.post<Certification>(
-      `/staff/${staffId}/certifications`,
-      data
-    )
-    return response.data
-  },
-
-  // Verify certification
-  verifyCertification: async (certificationId: string): Promise<void> => {
-    await apiClient.post(`/staff/certifications/${certificationId}/verify`)
-  },
+  // TODO: Add these endpoints in Phase 3
+  // - Get staff availability
+  // - Add/update/delete availability
+  // - Get staff certifications
+  // - Add/verify certifications
 }

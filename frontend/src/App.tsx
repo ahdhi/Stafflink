@@ -15,6 +15,11 @@ import CorporateAdminDashboard from '@/features/dashboard/CorporateAdminDashboar
 import FacilityUserDashboard from '@/features/dashboard/FacilityUserDashboard'
 import AgencyUserDashboard from '@/features/dashboard/AgencyUserDashboard'
 
+// Feature pages
+import ShiftsPage from '@/features/shifts/ShiftsPage'
+import StaffPage from '@/features/staff/StaffPage'
+import AgenciesPage from '@/features/agencies/AgenciesPage'
+
 // Protected Route wrapper
 import ProtectedRoute from '@/routes/ProtectedRoute'
 
@@ -41,13 +46,13 @@ function App() {
           <Route index element={<Navigate to="/dashboard" replace />} />
           <Route path="dashboard" element={<DashboardRouter />} />
 
-          {/* Feature routes will be added here */}
-          <Route path="shifts/*" element={<div>Shifts Module</div>} />
-          <Route path="staff/*" element={<div>Staff Module</div>} />
-          <Route path="agencies/*" element={<div>Agencies Module</div>} />
-          <Route path="facilities/*" element={<div>Facilities Module</div>} />
-          <Route path="reports/*" element={<div>Reports Module</div>} />
-          <Route path="users/*" element={<div>Users Module</div>} />
+          {/* Feature routes */}
+          <Route path="shifts" element={<ShiftsPage />} />
+          <Route path="staff" element={<StaffPage />} />
+          <Route path="agencies" element={<AgenciesPage />} />
+          <Route path="facilities" element={<div>Facilities Module - Coming Soon</div>} />
+          <Route path="reports" element={<div>Reports Module - Coming Soon</div>} />
+          <Route path="users" element={<div>Users Module - Coming Soon</div>} />
         </Route>
 
         {/* 404 */}

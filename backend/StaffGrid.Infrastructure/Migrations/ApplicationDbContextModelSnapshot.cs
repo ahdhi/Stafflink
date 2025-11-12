@@ -805,7 +805,7 @@ namespace StaffGrid.Infrastructure.Migrations
                     b.HasOne("StaffGrid.Core.Entities.Staff", "ProposedStaff")
                         .WithMany()
                         .HasForeignKey("ProposedStaffId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("StaffGrid.Core.Entities.Shift", "Shift")
                         .WithMany("Responses")

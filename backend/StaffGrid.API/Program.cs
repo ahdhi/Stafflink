@@ -4,11 +4,16 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using StaffGrid.Infrastructure.Data;
 using System.Text;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+    });
 builder.Services.AddEndpointsApiExplorer();
 
 // Configure Swagger with JWT support
@@ -109,6 +114,10 @@ builder.Services.AddScoped<StaffGrid.Application.Interfaces.IAuthService, StaffG
 builder.Services.AddScoped<StaffGrid.Application.Interfaces.IShiftService, StaffGrid.Infrastructure.Services.ShiftService>();
 builder.Services.AddScoped<StaffGrid.Application.Interfaces.IStaffService, StaffGrid.Infrastructure.Services.StaffService>();
 builder.Services.AddScoped<StaffGrid.Application.Interfaces.IAgencyService, StaffGrid.Infrastructure.Services.AgencyService>();
+builder.Services.AddScoped<StaffGrid.Application.Interfaces.IUserManagementService, StaffGrid.Infrastructure.Services.UserManagementService>();
+builder.Services.AddScoped<StaffGrid.Application.Interfaces.ICorporateManagementService, StaffGrid.Infrastructure.Services.CorporateManagementService>();
+builder.Services.AddScoped<StaffGrid.Application.Interfaces.IFacilityManagementService, StaffGrid.Infrastructure.Services.FacilityManagementService>();
+builder.Services.AddScoped<StaffGrid.Application.Interfaces.IUserCreationRequestService, StaffGrid.Infrastructure.Services.UserCreationRequestService>();
 
 var app = builder.Build();
 

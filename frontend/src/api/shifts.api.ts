@@ -2,10 +2,9 @@ import { apiClient } from './client'
 import type {
   Shift,
   ShiftCreateRequest,
-  ShiftBroadcastRequest,
-  AgencyResponse,
+  ShiftStatus,
   PaginatedResponse,
-  ApiResponse,
+  AgencyTier,
 } from '@/types'
 
 export const shiftsApi = {
@@ -13,7 +12,7 @@ export const shiftsApi = {
   getShifts: async (params?: {
     page?: number
     pageSize?: number
-    status?: string
+    status?: ShiftStatus
     facilityId?: string
     departmentId?: string
     startDate?: string
@@ -31,6 +30,14 @@ export const shiftsApi = {
     return response.data
   },
 
+  // Get my shifts (role-based)
+  getMyShifts: async (status?: ShiftStatus): Promise<Shift[]> => {
+    const response = await apiClient.get<Shift[]>('/shifts/my-shifts', {
+      params: { status },
+    })
+    return response.data
+  },
+
   // Create shift
   createShift: async (data: ShiftCreateRequest): Promise<Shift> => {
     const response = await apiClient.post<Shift>('/shifts', data)
@@ -43,61 +50,26 @@ export const shiftsApi = {
     return response.data
   },
 
-  // Cancel shift
-  cancelShift: async (id: string, reason: string): Promise<void> => {
-    await apiClient.post(`/shifts/${id}/cancel`, { reason })
+  // Delete shift
+  deleteShift: async (id: string): Promise<void> => {
+    await apiClient.delete(`/shifts/${id}`)
   },
 
   // Broadcast shift to agencies
-  broadcastShift: async (data: ShiftBroadcastRequest): Promise<ApiResponse<void>> => {
-    const response = await apiClient.post<ApiResponse<void>>(
-      `/shifts/${data.shiftId}/broadcast`,
-      data
-    )
-    return response.data
-  },
-
-  // Get agency responses for a shift
-  getShiftResponses: async (shiftId: string): Promise<AgencyResponse[]> => {
-    const response = await apiClient.get<AgencyResponse[]>(
-      `/shifts/${shiftId}/responses`
-    )
-    return response.data
-  },
-
-  // Accept agency response
-  acceptResponse: async (shiftId: string, responseId: string): Promise<void> => {
-    await apiClient.post(`/shifts/${shiftId}/responses/${responseId}/accept`)
-  },
-
-  // Bulk create shifts
-  bulkCreateShifts: async (shifts: ShiftCreateRequest[]): Promise<Shift[]> => {
-    const response = await apiClient.post<Shift[]>('/shifts/bulk', shifts)
-    return response.data
-  },
-
-  // Get shifts by facility
-  getShiftsByFacility: async (
-    facilityId: string,
-    params?: {
-      startDate?: string
-      endDate?: string
-      status?: string
+  broadcastShift: async (
+    shiftId: string,
+    data?: {
+      specificAgencyIds?: string[]
+      startFromTier?: AgencyTier
     }
-  ): Promise<Shift[]> => {
-    const response = await apiClient.get<Shift[]>(
-      `/facilities/${facilityId}/shifts`,
-      { params }
-    )
+  ): Promise<Shift> => {
+    const response = await apiClient.post<Shift>(`/shifts/${shiftId}/broadcast`, data || {})
     return response.data
   },
 
-  // Get unfilled shifts
-  getUnfilledShifts: async (params?: {
-    facilityId?: string
-    priority?: string
-  }): Promise<Shift[]> => {
-    const response = await apiClient.get<Shift[]>('/shifts/unfilled', { params })
+  // Assign staff to shift
+  assignStaff: async (shiftId: string, staffId: string): Promise<Shift> => {
+    const response = await apiClient.post<Shift>(`/shifts/${shiftId}/assign`, { staffId })
     return response.data
   },
 }

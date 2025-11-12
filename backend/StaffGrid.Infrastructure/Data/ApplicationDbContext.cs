@@ -23,6 +23,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Shift> Shifts => Set<Shift>();
     public DbSet<ShiftResponse> ShiftResponses => Set<ShiftResponse>();
     public DbSet<Notification> Notifications => Set<Notification>();
+    public DbSet<UserCreationRequest> UserCreationRequests => Set<UserCreationRequest>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -44,11 +45,13 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<Shift>().HasQueryFilter(e => !e.IsDeleted);
         modelBuilder.Entity<ShiftResponse>().HasQueryFilter(e => !e.IsDeleted);
         modelBuilder.Entity<Notification>().HasQueryFilter(e => !e.IsDeleted);
+        modelBuilder.Entity<UserCreationRequest>().HasQueryFilter(e => !e.IsDeleted);
 
         // Configure relationships
         ConfigureUserRelationships(modelBuilder);
         ConfigureFacilityAgencyRelationships(modelBuilder);
         ConfigureShiftRelationships(modelBuilder);
+        ConfigureUserCreationRequestRelationships(modelBuilder);
     }
 
     private void ConfigureUserRelationships(ModelBuilder modelBuilder)
@@ -137,7 +140,52 @@ public class ApplicationDbContext : DbContext
             .HasOne(sr => sr.ProposedStaff)
             .WithMany()
             .HasForeignKey(sr => sr.ProposedStaffId)
-            .OnDelete(DeleteBehavior.SetNull);
+            .OnDelete(DeleteBehavior.Restrict);
+    }
+
+    private void ConfigureUserCreationRequestRelationships(ModelBuilder modelBuilder)
+    {
+        // UserCreationRequest -> RequestedByUser
+        modelBuilder.Entity<UserCreationRequest>()
+            .HasOne(ucr => ucr.RequestedByUser)
+            .WithMany()
+            .HasForeignKey(ucr => ucr.RequestedBy)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        // UserCreationRequest -> ApprovedByUser (optional)
+        modelBuilder.Entity<UserCreationRequest>()
+            .HasOne(ucr => ucr.ApprovedByUser)
+            .WithMany()
+            .HasForeignKey(ucr => ucr.ApprovedBy)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        // UserCreationRequest -> Corporate (optional)
+        modelBuilder.Entity<UserCreationRequest>()
+            .HasOne(ucr => ucr.Corporate)
+            .WithMany()
+            .HasForeignKey(ucr => ucr.CorporateId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        // UserCreationRequest -> Facility (optional)
+        modelBuilder.Entity<UserCreationRequest>()
+            .HasOne(ucr => ucr.Facility)
+            .WithMany()
+            .HasForeignKey(ucr => ucr.FacilityId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        // UserCreationRequest -> Agency (optional)
+        modelBuilder.Entity<UserCreationRequest>()
+            .HasOne(ucr => ucr.Agency)
+            .WithMany()
+            .HasForeignKey(ucr => ucr.AgencyId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        // UserCreationRequest -> CreatedUser (optional)
+        modelBuilder.Entity<UserCreationRequest>()
+            .HasOne(ucr => ucr.CreatedUser)
+            .WithMany()
+            .HasForeignKey(ucr => ucr.CreatedUserId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

@@ -12,7 +12,7 @@ using StaffGrid.Infrastructure.Data;
 namespace StaffGrid.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251111134055_InitialCreate")]
+    [Migration("20251112030831_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -808,7 +808,7 @@ namespace StaffGrid.Infrastructure.Migrations
                     b.HasOne("StaffGrid.Core.Entities.Staff", "ProposedStaff")
                         .WithMany()
                         .HasForeignKey("ProposedStaffId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("StaffGrid.Core.Entities.Shift", "Shift")
                         .WithMany("Responses")
