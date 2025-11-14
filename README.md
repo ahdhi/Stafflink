@@ -2,38 +2,6 @@
 
 A comprehensive healthcare staffing management platform built with React + TypeScript (frontend) and .NET Core 9 (backend).
 
-## 🏗️ Project Structure
-
-```
-staffgrid/
-├── frontend/                    # React + TypeScript + Vite
-│   ├── src/
-│   │   ├── api/                # API client and endpoints
-│   │   ├── components/         # Reusable UI components
-│   │   ├── features/           # Feature-based modules
-│   │   │   ├── auth/          # Authentication
-│   │   │   ├── dashboard/     # Role-based dashboards
-│   │   │   ├── shifts/        # Shift management
-│   │   │   ├── staff/         # Staff management
-│   │   │   ├── agencies/      # Agency management
-│   │   │   ├── facilities/    # Facility management
-│   │   │   └── reports/       # Analytics & reporting
-│   │   ├── hooks/             # Custom React hooks
-│   │   ├── lib/               # Utility functions
-│   │   ├── routes/            # Route definitions
-│   │   ├── store/             # Zustand state management
-│   │   └── types/             # TypeScript definitions
-│   └── package.json
-│
-├── backend/                     # .NET Core 9 Web API
-│   ├── StaffGrid.API/          # API layer (Controllers, Hubs)
-│   ├── StaffGrid.Core/         # Domain entities and interfaces
-│   ├── StaffGrid.Application/  # Business logic and DTOs
-│   └── StaffGrid.Infrastructure/ # Data access and services
-│
-└── docs/                        # Documentation
-
-```
 
 ## 🚀 Tech Stack
 
